@@ -83,3 +83,8 @@ How to Use
 
 	View sales trends, ratings, and other KPIs directly from the dashboard.
 
+
+![Mobile_Sales_Dashboard](https://github.com/user-attachments/assets/4693d55c-6fd5-4c73-9c0e-0d0aa69cfbfa)
+
+ 
+
