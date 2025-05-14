@@ -21,64 +21,65 @@ Key Features
 	Customer Rating Status Calculation
 
 
-•	Dynamic Data Filtering with slicers for:
+	Dynamic Data Filtering with slicers for:
 
-o	Mobile Model
+	Mobile Model
 
-o	Payment Method
+	Payment Method
 
-o	Brand
+	Brand
 
 
-•	Comprehensive Data Visualizations:
+	Comprehensive Data Visualizations:
 
-o	Map visualization for sales by city.
+	Map visualization for sales by city.
 
-o	Line chart for total sales trend over months.
+	Line chart for total sales trend over months.
 
-o	Bar charts for rating analysis and mobile model sales.
+	Bar charts for rating analysis and mobile model sales.
 
-o	Pie chart for payment method distribution.
+	Pie chart for payment method distribution.
 
 •	Page Navigation for seamless user experience.
 
 
  DAX Measures Used
  
-•	Total Sales:
+	Total Sales:
 Total_Sales = SUMX(Mobile_Sales_Data, Mobile_Sales_Data[Units Sold] * Mobile_Sales_Data[Price Per Unit])
 
-•	Total Transactions:
+	Total Transactions:
 Transactions = COUNT(Mobile_Sales_Data[Transaction ID])
 
-•	Average Price:
+	Average Price:
 Average_Price = AVERAGE(Mobile_Sales_Data[Price Per Unit])
 
-•	Total Quantity:
+	Total Quantity:
 Total_Quantity = SUM(Mobile_Sales_Data[Units Sold])
 
-•	MTD Sales:
+	MTD Sales:
 MTD_REPORT = TOTALMTD([Total_Sales], Custom_Calender[Date].[Date])
 
-•	QTD Sales:
+	QTD Sales:
 QTD_REPORT = TOTALQTD([Total_Sales], Custom_Calender[Date].[Date])
 
-•	YTD Sales:
+	YTD Sales:
 YTD_REPORT = TOTALYTD([Total_Sales], Custom_Calender[Date].[Date])
 
-•	Same Period Last Year Sales:
+	Same Period Last Year Sales:
 Same_Period_Last_Year = CALCULATE([Total_Sales], SAMEPERIODLASTYEAR(Custom_Calender[Date].[Date]))
 
 
-•	Customer Rating Status (Calculated Column):
+	Customer Rating Status (Calculated Column):
 
 •Rating_Status = IF(Mobile_Sales_Data[Customer Ratings]>=4,"Good",
 IF(Mobile_Sales_Data[Customer Ratings]>2,"Average","Poor"))
 
 How to Use
 
-•	Use the slicers to filter data based on Mobile Model, Payment Method, and Brand.
+	Use the slicers to filter data based on Mobile Model, Payment Method, and Brand.
 
-•	Switch between pages using the page navigator.
+	Switch between pages using the page navigator.
 
-•	View sales trends, ratings, and other KPIs directly from the dashboard.
+	View sales trends, ratings, and other KPIs directly from the dashboard.
+
